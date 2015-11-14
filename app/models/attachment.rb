@@ -5,5 +5,5 @@ class Attachment < ActiveRecord::Base
   has_attached_file :attachment
   validates :attachment, attachment_presence: true
 
-  validates_presence_of :log_id  
+  validates_presence_of :log_id, :user_id 
 end
