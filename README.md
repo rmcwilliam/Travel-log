@@ -90,6 +90,21 @@ If the user could not be created, you should receive status code 422 and ...
     ]
 }`
 
+## Index of users logs 
+### GET `/users/:id/logs`
+
+#### Params:
+
+`id:` Must provide the users id to see their index of logs.
+
+
+#### Response: 
+
+
+
+
+
+
 ## Create new log
 ### Post `/logs`
 
@@ -158,7 +173,7 @@ Will return all logs with their title, description and ID.
 
 #### Params:
 
-`log_id:` Must provide ID of log you would like to create an attachment in. 
+`log_id:` Must provide ID of log you would like to create an attachment in. `location`: Must provide locations as string. `
 
 #### Response:
 
