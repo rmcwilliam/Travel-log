@@ -16,6 +16,10 @@ Rails.application.routes.draw do
 
   post "/login", to: "registrations#login"
 
+  resources :logs, except: [:new, :edit] do 
+    resources :attachments, except: [:new, :edit]
+  end
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
