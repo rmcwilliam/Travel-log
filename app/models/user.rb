@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 	validates_presence_of :username
 	validates_uniqueness_of :email, :username
 	validates_format_of :email, with: /.+@.+\..+/
-  	validates :auth_token, presence: true, uniqueness: true
+  validates :auth_token, presence: true, uniqueness: true
 
   	
   def ensure_access_token!
