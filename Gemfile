@@ -42,6 +42,9 @@ gem 'aws-sdk-v1'
 # Use foreman to setup enviornment variables to run the app
 gem 'foreman'
 
+# Use rack-cors to make cross domain ajax calls 
+gem 'rack-cors'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
