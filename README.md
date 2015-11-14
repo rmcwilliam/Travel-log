@@ -66,7 +66,7 @@ Otherwise:
 }`
 
 ## Logging In
-### POST '/login`
+### POST `/login`
 
 #### Params:
 
