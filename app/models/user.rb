@@ -13,14 +13,14 @@ class User < ActiveRecord::Base
 
   	
   def ensure_access_token!
-    if self.auth_token.blank?
-      self.auth_token = User.generate_token
+    if self.access_token.blank?
+      self.access_token = User.generate_token
     end
   end
 
   def self.generate_token
     token = SecureRandom.hex
-    while User.exists?(auth_token: token)
+    while User.exists?(access_token: token)
       token = SecureRandom.hex
     end
     token
