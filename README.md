@@ -90,19 +90,6 @@ If the user could not be created, you should receive status code 422 and ...
     ]
 }`
 
-## Index of users logs 
-### GET `/users/:id/logs`
-
-#### Params:
-
-`id:` Must provide the users id to see their index of logs.
-
-
-#### Response: 
-
-
-
-
 
 
 ## Create new log
@@ -117,16 +104,15 @@ If the user could not be created, you should receive status code 422 and ...
 
 
 
+## Index of users logs 
+### GET `/users/:id/logs`
 
-## Index of logs
-### GET `/logs`
+#### Params:
 
-#### Params: none
+`id:` Must provide the users id to see their index of logs.
 
-Will return all logs with their title, description and ID.
 
-#### Response:
-
+#### Response: 
 
 
 
