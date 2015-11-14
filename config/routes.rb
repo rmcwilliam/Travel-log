@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   post "/login", to: "registrations#login"
 
-  get "/users/:user_id/logs", to: "logs#index"
+  get "/users/:id/logs", to: "logs#index"
 
   resources :logs, except: [:new, :edit] do 
     resources :attachments, except: [:new, :edit]
