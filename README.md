@@ -66,7 +66,7 @@ Otherwise:
 }`
 
 ## Logging In
-### `POST /login`
+### POST '/login`
 
 #### Params:
 
@@ -89,4 +89,135 @@ If the user could not be created, you should receive status code 422 and ...
         "Username has already been taken"
     ]
 }`
+
+## Create new log
+### Post '/logs'
+
+#### Params:
+
+'title:' Must be given a title. 'description:' Must provide a description.
+
+#### Response:
+
+
+
+
+
+## Index of logs
+### GET '/logs'
+
+#### Params: none
+
+Will return all logs with their title, description and ID.
+
+#### Response:
+
+
+
+
+
+## Show a specific log 
+#### GET '/logs/:id'
+
+#### Params: 
+
+'id:' Must provide the ID of the individual log you would like to view.
+
+#### Response:
+
+
+
+
+## Update a log
+### PUT '/logs/:id'
+
+#### Params: 
+
+'id:' Must provide the ID the individual log you would like to update. 'title:' Must be given a title. 'description:' Must provide a description.
+
+#### Response:
+
+
+
+
+## Delete a log
+### DELETE '/logs/:id'
+
+#### Params: 
+
+'id:' Must provide the ID the individual log you would like to delete.
+
+#### Response:
+
+
+
+
+
+## Create new attachment
+### Post '/logs/:log_id/attachments'
+
+#### Params:
+
+'log_id:' Must provide ID of log you would like to create an attachment in. 
+
+#### Response:
+
+
+
+
+
+## Show a specific attachment 
+#### GET '/logs/:log_id/attachments/:id'
+
+#### Params: 
+
+'log_id:' Must provide the ID of the individual log that contains the attachment. 'id:' Must provide the ID of the individual attachment you would like to view.
+
+#### Response:
+
+
+
+
+
+## Index of attachments within log 
+### GET '/logs/:log_id/attachments'
+
+#### Params: none
+
+'log_id:' Must provide ID of log you would would like to view all attachments in.
+
+#### Response:
+
+
+
+
+## Delete a specific attachment 
+#### DELETE '/logs/:log_id/attachments/:id'
+
+#### Params: 
+
+'id:' Must provide the ID the individual attachment you would like to delete.
+
+#### Response:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
