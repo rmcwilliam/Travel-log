@@ -91,11 +91,11 @@ If the user could not be created, you should receive status code 422 and ...
 }`
 
 ## Create new log
-### Post '/logs'
+### Post `/logs`
 
 #### Params:
 
-'title:' Must be given a title. 'description:' Must provide a description.
+`title:` Must be given a title. `description:` Must provide a description.
 
 #### Response:
 
@@ -104,7 +104,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 
 ## Index of logs
-### GET '/logs'
+### GET `/logs`
 
 #### Params: none
 
@@ -117,11 +117,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Show a specific log 
-#### GET '/logs/:id'
+#### GET `/logs/:id`
 
 #### Params: 
 
-'id:' Must provide the ID of the individual log you would like to view.
+`id:` Must provide the ID of the individual log you would like to view.
 
 #### Response:
 
@@ -129,11 +129,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Update a log
-### PUT '/logs/:id'
+### PUT `/logs/:id`
 
 #### Params: 
 
-'id:' Must provide the ID the individual log you would like to update. 'title:' Must be given a title. 'description:' Must provide a description.
+`id:` Must provide the ID the individual log you would like to update. `title:` Must be given a title. `description:` Must provide a description.
 
 #### Response:
 
@@ -141,11 +141,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Delete a log
-### DELETE '/logs/:id'
+### DELETE `/logs/:id`
 
 #### Params: 
 
-'id:' Must provide the ID the individual log you would like to delete.
+`id:` Must provide the ID the individual log you would like to delete.
 
 #### Response:
 
@@ -154,11 +154,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Create new attachment
-### Post '/logs/:log_id/attachments'
+### Post `/logs/:log_id/attachments`
 
 #### Params:
 
-'log_id:' Must provide ID of log you would like to create an attachment in. 
+`log_id:` Must provide ID of log you would like to create an attachment in. 
 
 #### Response:
 
@@ -167,11 +167,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Show a specific attachment 
-#### GET '/logs/:log_id/attachments/:id'
+#### GET `/logs/:log_id/attachments/:id`
 
 #### Params: 
 
-'log_id:' Must provide the ID of the individual log that contains the attachment. 'id:' Must provide the ID of the individual attachment you would like to view.
+`log_id:` Must provide the ID of the individual log that contains the attachment. `id:` Must provide the ID of the individual attachment you would like to view.
 
 #### Response:
 
@@ -180,11 +180,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Index of attachments within log 
-### GET '/logs/:log_id/attachments'
+### GET `/logs/:log_id/attachments`
 
 #### Params: none
 
-'log_id:' Must provide ID of log you would would like to view all attachments in.
+`log_id:` Must provide ID of log you would would like to view all attachments in.
 
 #### Response:
 
@@ -192,11 +192,11 @@ Will return all logs with their title, description and ID.
 
 
 ## Delete a specific attachment 
-#### DELETE '/logs/:log_id/attachments/:id'
+#### DELETE `/logs/:log_id/attachments/:id`
 
 #### Params: 
 
-'id:' Must provide the ID the individual attachment you would like to delete.
+`id:` Must provide the ID the individual attachment you would like to delete.
 
 #### Response:
 
