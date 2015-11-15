@@ -97,7 +97,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params:
 
-`title:` Must be given a title as a string. `description:` Must provide a description as a string.
+`title:` Must be given a title as a string. `description:` Can be optionally provided.
 
 #### Response:
 
