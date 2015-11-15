@@ -8,12 +8,12 @@ class AttachmentsController < ApplicationController
   end
 
   def create
-    @attachment = current_user.attachments.new(location: params[:location],
+    @attachment = Attachment.new(location: params[:location],
                                                attachment: params[:attachment],
                                                timestamp: params[:timestamp],
                                                caption: params[:caption],
-                                               log_id: params[:log_id], created_at: params[:created_at]
-                                               )
+                                               log_id: params[:log_id],
+                                               user_id: current_user.id)
     if @attachment.save
       render "create.json.jbuilder", status: :created
     else
