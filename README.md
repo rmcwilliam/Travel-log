@@ -162,12 +162,19 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params:
 
-`log_id:` Must provide ID of log you would like to create an attachment in. `location`: Must provide locations as string. `
+`log_id:` Must provide ID of log you would like to create an attachment in. `location:` Must provide locations as string. `
+`caption:` Must provide caption. `
+`timestamp:` Must provide timestamp with attachment. `
+`attachment:` Must have attachment file attached. `
 
 #### Response:
-
-
-
+`{
+  "attachment": {
+    "user_id": 1,
+    "location": "atl",
+    "caption": "the pic"
+  }
+}`
 
 
 ## Show a specific attachment 
@@ -178,20 +185,26 @@ If the user could not be created, you should receive status code 422 and ...
 `log_id:` Must provide the ID of the individual log that contains the attachment. `id:` Must provide the ID of the individual attachment you would like to view.
 
 #### Response:
-
-
-
+`{
+  "attachment": {
+    "user_id": 1,
+    "location": "atl",
+    "caption": "hello"
+  }
+}`
 
 
 ## Index of attachments within log 
 ### GET `/logs/:log_id/attachments`
 
-#### Params: none
+#### Params:
 
 `log_id:` Must provide ID of log you would would like to view all attachments in.
-
+`id:` Must provide ID of attachment you want to index.`
 #### Response:
-
+`{
+  "attachments": []
+}`
 
 
 
@@ -203,7 +216,7 @@ If the user could not be created, you should receive status code 422 and ...
 `id:` Must provide the ID the individual attachment you would like to delete.
 
 #### Response:
-
+`{"success":"Log delete successful!"}`
 
 
 
