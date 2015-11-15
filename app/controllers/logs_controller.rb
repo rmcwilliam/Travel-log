@@ -3,7 +3,7 @@ class LogsController < ApplicationController
 
    def create
     @log = Log.new(title: params[:title],
-                    description: params[:description]
+                    description: params[:description],
                      user_id: current_user.id)
     if @log.save
       render "create.json.jbuilder", status: :created
@@ -30,7 +30,7 @@ class LogsController < ApplicationController
       @log.update
       render json: {success: "Title: #{@log.title}"}, status: :accepted 
     else    
-     render json: { error: error: "Unable to edit the deck." },    
+     render json: { error: "Unable to edit the log" },    
             status: :unauthorized   
     end
   end
@@ -39,7 +39,7 @@ class LogsController < ApplicationController
     @log = Log.find(params[:log_id])
      if @log && current_user.id == @log.user_id
       @log.destroy
-      render json: {success: "Deck delete successful!"}, status: :accepted 
+      render json: {success: "Log delete successful!"}, status: :accepted 
     else    
      render json: { error: "Unable to delete the deck." },    
             status: :unauthorized   
