@@ -15,20 +15,19 @@ class LogsController < ApplicationController
 
   def index
      @logs = Log.find_by(user_id: params[:user_id])
-     @logs.all
-    render "show.json.jbuilder", status: :accepted 
+    render "index.json.jbuilder", status: :accepted 
   end
 
   def show
-    @log = Log.find(params[:log_id])
+    @log = Log.find_by(params[:log_id])
     render "show.json.jbuilder", status: :accepted
   end
 
   def update
-     @log = Log.find(params[:log_id])
+     @log = Log.find_by(params[:log_id])
      if @log && current_user.id == @log.user_id
-      @log.update
-      render json: {success: "Title: #{@log.title}"}, status: :accepted 
+      @log.update(title: params[:title], description: params[:description])
+      render json: {success: "Title: #{@log.title}, Description: #{@log.description}"}, status: :accepted 
     else    
      render json: { error: "Unable to edit the log" },    
             status: :unauthorized   
@@ -36,7 +35,7 @@ class LogsController < ApplicationController
   end
 
   def destroy
-    @log = Log.find(params[:log_id])
+    @log = Log.find_by(params[:log_id])
      if @log && current_user.id == @log.user_id
       @log.destroy
       render json: {success: "Log delete successful!"}, status: :accepted 
