@@ -76,6 +76,7 @@ Otherwise:
 
 `{
     "user": {
+        "user_id": 1,
         "username": "apifan",
         "access_token": "9f5b8ebf876121c3fc4c0fa18a511e16"
     }
@@ -101,7 +102,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
+`{"log":{"user_id":1,"title":"My trip to Asia","description":"Asia is awesome","log_id":6}}`
 
 
 ## Index of users logs 
@@ -126,7 +127,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
+`{"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1}}`
 
 
 ## Update a log
@@ -138,7 +139,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
+`{"success":"Title: My trip to the moon, Description: "}`
 
 
 ## Delete a log
@@ -150,8 +151,9 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
-
+`{
+  "success": "Log delete successful!"
+}`
 
 
 ## Create new attachment
