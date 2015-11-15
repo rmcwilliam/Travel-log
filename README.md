@@ -97,7 +97,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params:
 
-`title:` Must be given a title. `description:` Must provide a description.
+`title:` Must be given a title as a string. `description:` Must provide a description as a string.
 
 #### Response:
 
@@ -134,7 +134,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params: 
 
-`id:` Must provide the ID the individual log you would like to update. `title:` Must be given a title. `description:` Must provide a description.
+`id:` Must provide the ID the individual log you would like to update. `title:` Must be given a title as a string. `description:` Must provide a description as a string.
 
 #### Response:
 
