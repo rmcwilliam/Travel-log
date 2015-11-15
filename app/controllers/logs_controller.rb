@@ -40,7 +40,7 @@ class LogsController < ApplicationController
       @log.destroy
       render json: {success: "Log delete successful!"}, status: :accepted 
     else    
-     render json: { error: "Unable to delete the deck." },    
+     render json: { error: "Unable to delete the log." },    
             status: :unauthorized   
     end
   end

@@ -17,9 +17,9 @@ class ApplicationController < ActionController::Base
   	end
   end
 
-  rescue_from ActiveRecord::RecordNotFound do |error|
-  	render json: { error: "Could not find requested object: #{error.message }" },
-  	status: not_found
-  end
+  # rescue_from ActiveRecord::RecordNotFound do |error|
+  # 	render json: { error: "Could not find requested object: #{error.message }" },
+  # 	status: not_found
+  # end
   
 end

@@ -14,6 +14,7 @@ class AttachmentsController < ApplicationController
                                                caption: params[:caption],
                                                log_id: params[:log_id],
                                                user_id: current_user.id)
+    
     if @attachment.save
       render "create.json.jbuilder", status: :created
     else
@@ -34,11 +35,12 @@ class AttachmentsController < ApplicationController
     attachment = Attachment.find(params[:id])
     log = Log.find(attachment.log_id)
 
-    if current_user.id == post.user_id
-      flash[:notice] = "Destroyed the attachment: #{attachment.title}"
+    if current_user.id == attachment.user_id
       attachment.destroy
+      render json: {success: "Log delete successful!"}, status: :accepted
     else
-      flash[:notice] = "I can't let you do that."
+      render json: { error: "Unable to delete the deck." },    
+            status: :unauthorized 
     end
   end
 
