@@ -115,7 +115,8 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response: 
 
-
+`{"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1},
+"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1}}`
 
 
 ## Show a specific log 
