@@ -14,7 +14,8 @@ class LogsController < ApplicationController
   end
 
   def index
-     @log = Log.find_by(user_id: params[:user_id])
+     @logs = Log.find_by(user_id: params[:user_id])
+     @logs.all
     render "show.json.jbuilder", status: :accepted 
   end
 
