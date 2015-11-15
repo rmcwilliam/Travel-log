@@ -76,6 +76,7 @@ Otherwise:
 
 `{
     "user": {
+        "user_id": 1,
         "username": "apifan",
         "access_token": "9f5b8ebf876121c3fc4c0fa18a511e16"
     }
@@ -97,11 +98,11 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params:
 
-`title:` Must be given a title. `description:` Must provide a description.
+`title:` Must be given a title as a string. `description:` Can be optionally provided.
 
 #### Response:
 
-
+`{"log":{"user_id":1,"title":"My trip to Asia","description":"Asia is awesome","log_id":6}}`
 
 
 ## Index of users logs 
@@ -114,7 +115,8 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response: 
 
-
+`{"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1},
+"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1}}`
 
 
 ## Show a specific log 
@@ -126,7 +128,7 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
+`{"log":{"title":"My trip to Europe","description":null,"log_id":3,"user_id":1}}`
 
 
 ## Update a log
@@ -134,11 +136,11 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Params: 
 
-`id:` Must provide the ID the individual log you would like to update. `title:` Must be given a title. `description:` Must provide a description.
+`id:` Must provide the ID the individual log you would like to update. `title:` Must be given a title as a string. `description:` Must provide a description as a string.
 
 #### Response:
 
-
+`{"success":"Title: My trip to the moon, Description: "}`
 
 
 ## Delete a log
@@ -150,8 +152,9 @@ If the user could not be created, you should receive status code 422 and ...
 
 #### Response:
 
-
-
+`{
+  "success": "Log delete successful!"
+}`
 
 
 ## Create new attachment
