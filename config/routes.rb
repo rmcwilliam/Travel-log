@@ -1,29 +1,5 @@
 Rails.application.routes.draw do
-  get 'logs/index'
-
-  get 'logs/create'
-
-  get 'logs/show'
-
-  get 'logs/update'
-
-  get 'logs/destroy'
-
-  get 'attachments/index'
-
-  get 'attachments/create'
-
-  get 'attachments/show'
-
-  get 'attachments/update'
-
-  get 'attachments/destroy'
-
-  get 'registrations/create'
-
-  get 'registrations/login'
-
-  get 'registrations/destroy'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
