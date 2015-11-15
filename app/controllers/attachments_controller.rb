@@ -28,8 +28,6 @@ class AttachmentsController < ApplicationController
     render "show.json.jbuilder", status: :ok
   end
 
-  # def update
-  # end
 
   def destroy
     attachment = Attachment.find(params[:id])
@@ -37,9 +35,9 @@ class AttachmentsController < ApplicationController
 
     if current_user.id == attachment.user_id
       attachment.destroy
-      render json: {success: "Log delete successful!"}, status: :accepted
+      render json: {success: "Attachment delete successful!"}, status: :accepted
     else
-      render json: { error: "Unable to delete the deck." },    
+      render json: { error: "Unable to delete the attachment." },    
             status: :unauthorized 
     end
   end
