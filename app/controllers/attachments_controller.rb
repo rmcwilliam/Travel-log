@@ -8,7 +8,12 @@ class AttachmentsController < ApplicationController
   end
 
   def create
-    @attachment = current_user.attachments.new(attachment_params)
+    @attachment = current_user.attachments.new(location: params[:location],
+                                               attachment: params[:attachment],
+                                               timestamp: params[:timestamp],
+                                               caption: params[:caption],
+                                               log_id: params[:log_id], created_at: params[:created_at]
+                                               )
     if @attachment.save
       render "create.json.jbuilder", status: :created
     else
@@ -37,8 +42,4 @@ class AttachmentsController < ApplicationController
     end
   end
 
-  private
-  def attachment_params
-    params.require(:attachments.permit(:user_id, :log_id)
-  end
 end
