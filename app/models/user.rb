@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
   validates :access_token, presence: true, uniqueness: true
 
   	
- def ensure_access_token!
+
+  def ensure_access_token!
     if self.access_token.blank?
       self.access_token = User.generate_token
     end
