@@ -45,4 +45,3 @@ class LogsController < ApplicationController
     end
   end
 end
-
