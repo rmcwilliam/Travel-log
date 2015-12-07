@@ -1,7 +1,12 @@
 # API 
 
+
 ##Overview
-Data can be accessed from the "" domain. All requests and responses will formatted as JSON.
+Data can be accessed from the [http://mysterious-fjord-1759.herokuapp.com/](http://mysterious-fjord-1759.herokuapp.com/) domain. All requests and responses will formatted as JSON. Use the ruby on rails backed api and database to register and store user related information supporting travel log applications. Specifically ones where a user has a log, that has a log description and log photos or attachments. 
+
+####Tools Used
+ruby on rails, postgresql, sqlite3, rak-cors, heroku, paperclip, aws s3, bcrypt, postman, foreman 
+
 
 
 ## Authentication Notes:
@@ -9,7 +14,7 @@ Data can be accessed from the "" domain. All requests and responses will formatt
 To make an authenticated request in any case other than registering
 or deleting an account, you must supply an `Access-Token` as written in the header along with a valid long string of numbers and letters as the value. Otherwise, you'll receive a 401 Forbidden error.
 
-`['Access-Token'] = '9f5b8ebf876121c3fc4c0fa18a511e16' `
+`['Access-Token'] = 'Long string of numbers and letters' `
 
 ## Registering an Account
 
